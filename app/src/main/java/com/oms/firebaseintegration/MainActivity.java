@@ -28,20 +28,20 @@ public class MainActivity extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference databaseReference = database.getReference("message");
 
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataChange) {
-
-                String data = dataChange.getValue(String.class);
-                Log.d("test", "Value is: " + data);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-
-                Log.w("test", "Failed to read value.", error.toException());
-            }
-        });
+//        databaseReference.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataChange) {
+//
+//                String data = dataChange.getValue(String.class);
+//                Log.d("test", "Value is: " + data);
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError error) {
+//
+//                Log.w("test", "Failed to read value.", error.toException());
+//            }
+//        });
     }
 
     @Override
