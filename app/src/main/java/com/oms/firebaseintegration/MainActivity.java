@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
+            public void onDataChange(DataSnapshot dataChange) {
 
-                String data = dataSnapshot.getValue(String.class);
+                String data = dataChange.getValue(String.class);
                 Log.d("test", "Value is: " + data);
             }
 
